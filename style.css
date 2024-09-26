@@ -1,0 +1,243 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: #007BFF;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+/* Container styling for left and right panes */
+.container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust for navbar height */
+    margin-top: 60px; /* Offset to account for navbar */
+}
+
+/* Left pane styling */
+.left-pane {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 2px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.left-pane h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Right pane styling */
+.right-pane {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+/* General form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    width:500px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width:80px;
+    height:50px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* List of questions (left pane) */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+ul li:hover {
+    background-color: #f1f1f1;
+    border-color: #007BFF;
+}
+
+/* Selected question and responses (right pane) */
+#selectedQuestionTitle {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#selectedQuestionBody {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#responseList {
+    list-style: none;
+    padding-left: 0;
+}
+
+#responseList li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+#resolveBtn {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+#resolveBtn:hover {
+    background-color: #218838;
+}
+
+/* Right pane default question form */
+#questionForm h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* Right pane response section styling */
+#responseSection {
+    display: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-pane, .right-pane {
+        flex: none;
+        height: auto;
+    }
+
+    ul li {
+        font-size: 1.1em;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
